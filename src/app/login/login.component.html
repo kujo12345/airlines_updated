@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class = "text-center bg-dark text-primary p-3" >Welcome to Colgate Airlines</h1>
+    <img src="../assets/images/colgate.jpg" class="img-fluid " alt="Colgate Airlines">
+    
+    <form [formGroup] = "loginForm" (ngSubmit)="onSubmit()">
+
+        <h2 class = "text-center bg-dark text-primary p-3">Input Credentials</h2>
+        <br>
+
+        <label for = "username" class = "text-white">Username:</label>
+        <input type="text" 
+        id="username" 
+        class="form-control m-2"
+        formControlName = "username" 
+        required>{{username.value}}
+        <br>
+
+        <label for="password" class = "text-white">Password:</label>
+        <input id = "password" 
+        type = "password" 
+        formControlName = "password" 
+        class="form-control m-2"
+        required> {{password.value}}
+        <br>
+
+        <div class = "text-center">
+            <button type="submit" [disabled]="!loginForm.valid">Submit
+                <div *ngIf = 'toAdmin()'>
+                    <app-admin></app-admin>
+                </div>
+            </button>
+        </div>
+
+    </form>
+</body>
+</html>

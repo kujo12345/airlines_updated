@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "airlines1-7d772": {
+      "hosting": {
+        "airlines": [
+          "airlines1-7d772"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "airlines1-7d772"
+  }
+}

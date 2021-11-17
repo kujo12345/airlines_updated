@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Create a Flight</h1>
+    
+    <form>
+        <div class = "text-center">
+        <label class = "p-2">Destination: </label>
+            <input type="text" 
+            id="destination" 
+            class="form-control m-2"
+            formControlName = "destination" 
+            required>{{destination.value}}
+        <br>
+        <label class = "p-2">Origin: </label>
+            <input type="text" 
+            id="origin" 
+            class="form-control m-2"
+            formControlName = "origin" 
+            required>{{origin.value}}
+        <br>
+        <label class = "time">Departure Time: </label>
+            <input type = "time" 
+            id = "departure"  
+            class = " form-control m-2"
+            formControlName = "origin"
+            required
+            min="00:00" 
+            max="24:00"
+            >{{departure.value}}
+        <br>
+        <label class = "p-2">Arrival Time: </label>
+            <input type = "time" 
+            id = "arrival" 
+            class = " form-control m-2"
+            formControlName = "arrival"
+            required
+            min="00:00" 
+            max="24:00">{{arrival.value}}
+        <br>
+        <label class = "p-2">Type: </label>
+            <input type = "string" 
+            id = "type" 
+            class = " form-control m-2"
+            formControlName = "type"
+            required>{{type.value}}
+        <br>
+        <label class = "p-2">Flight Code: </label>
+            <input type = "number" 
+            id = "code" 
+            class = " form-control m-2"
+            formControlName = "code"
+            required>{{code.value}}
+        <br>
+        <label class = "p-2">Airline: </label>
+            <input type = "string" 
+            id = "airline" 
+            class = " form-control m-2"
+            formControlName = "airline"
+            required>{{airline.value}}
+        <br>
+        </div>
+    </form>
+</body>
+</html>

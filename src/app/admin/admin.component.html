@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class = "text-center bg-secondary">
+        <h1 class = "text-center p-4 bg-dark text-primary">Welcome, Administrator</h1>
+        <h2 class = "text-center p-4 bg-dark text-primary">What do you want to do?</h2>
+        <br>
+
+        <button id = "create-flight" 
+        routerLinkActive = "active" 
+        [routerLink] = "/admin/create-flight" 
+        (click) = "toCreateFlight();" 
+        #create-flight>
+            Create Flight</button>
+        <br>
+        <button id = "cancel-flight" 
+        routerLinkActive = "active" 
+        [routerLink] = "/admin/cancel-flight" 
+        (click) = "toCancelFlight();" 
+        #cancel-flight>
+            Cancel Flight</button>
+        <br>
+        <button id = "view-flights" 
+        routerLinkActive = "active" 
+        [routerLink] = "/admin/view-flights" 
+        (click) = "toViewFlights();" 
+        #view-flights>
+            View Flights</button>
+        <br>
+        <button id = "view-users" 
+        routerLinkActive = "active" 
+        [routerLink] = "/admin/view-users" 
+        (click) = "toViewUsers();" 
+        #view-users>
+            View Users</button>
+        <br>
+
+        <button id = "book-user" 
+        routerLinkActive = "active" 
+        [routerLink] = "/admin/book-flights" 
+        (click) = "toBookforUser();" 
+        #book-user>
+            Book a Flight for a User</button>
+        <br>
+        
+        <button id = "cancel-user" 
+        routerLinkActive = "active" 
+        [routerLink] = "/admin/cancel-user" 
+        (click) = "toCancelforUser();" 
+        #cancel-user>
+            Cancel Flight for a User</button>
+        <br>
+
+        <button id = "view-user-booking" 
+        routerLinkActive = "active" 
+        [routerLink] = "/admin/view-bookings" 
+        (click) = "toViewUserBookings();" 
+        #view-user-booking>
+            View User Bookings</button>
+        <br>
+
+        <button id = "log-out" 
+        routerLinkActive = "active" 
+        [routerLink] = "/admin/login" 
+        (click) = "toLogout();" 
+        #log-out>
+            Log Out</button>
+        <br>
+    </div>
+    
+</body>
+</html>
